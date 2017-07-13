@@ -6,5 +6,16 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app works!';
+  
+  showPosts:boolean;
+  constructor(){
+    this.showPosts=false  
+  }
+  showp(){
+   if( this.showPosts==true){
+      this.showPosts=false
+         }else{
+            this.showPosts=true
+         }
+  }
 }

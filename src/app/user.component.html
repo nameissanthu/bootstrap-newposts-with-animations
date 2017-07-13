@@ -1,0 +1,56 @@
+
+<h1 class="list-group-item list-group-item-info">User Details</h1>
+<img src="http://bestanimations.com/Humans/man-guy-walking-animated-gif-3.gif" height="120" width="90">
+    <button (click)="showUserdetails()" class="btn btn-warning">{{showUser ? "Hide User Details" : "Show User Details"}}</button>
+    <div *ngIf="showUser">
+    <div class="well">
+              <h2>{{name}}</h2>
+              <h2><small><strong>Email :</strong>{{email}}</small></h2>
+              <p><small><strong>Address :</strong>{{address.street}},{{address.city}},{{address.country}}</small></p>
+              <button (click)="showEdituser()" class="btn btn-sm btn-info">{{showEdit ? "Hide Edit User Details" : "Edit User Details"}}</button>
+              <div *ngIf="showEdit">
+              <h1 class="list-group-item-info">Edit User Details</h1>
+             <label>  Name </label><br>
+             <img src="http://1.bp.blogspot.com/-k9qW6rffyOQ/VoxN17PGXoI/AAAAAAAAAFY/yStge9VzRxk/s1600/heroboy%2Brun.gif" height="60" width="60">
+             <input type="text" [(ngModel)]="name"><br>
+                          <label> Email </label><br>
+                          <img src="http://www.gifimagesdownload.com/wp-content/uploads/2015/10/email-animated-gif-45847.gif" height="40" width="60">
+             <input type="text" [(ngModel)]="email"><br>
+                          <label>  Address.Street </label><br>
+                          <img src="http://www.realtor.com/welcome/holidayhouse/images/house03.gif" height="40" width="60">
+             <input type="text" [(ngModel)]="address.street"><br>
+                          <label> Address.city </label><br>
+                          <img src="https://3.imimg.com/data3/FQ/LP/MY-9323235/charminar-500x500.gif" height="40" width="60">
+             <input type="text" [(ngModel)]="address.city"><br>
+                          <label>  Address.country </label><br>
+                          <img src="http://bestanimations.com/Flags/Asia/india/indian-flag-waving-gif-animation-9.gif" height="40" width="60">
+             <input type="text" [(ngModel)]="address.country">
+             <br><br>
+             <button (click)="submitClick()"class="btn btn-md btn-success">Submit</button>
+             </div>
+              </div>
+              </div>
+             <hr class="list-group-item list-group-item-success"> 
+             
+            <h1 class="list-group-item list-group-item-danger">User Hobbies</h1>
+            <img src="https://cdn0.iconfinder.com/data/icons/beer-bottle-emoji-cartoons-2/418/beer-bottle-emoji-cartoon-alcohol-brew-045-512.png" height="100" width="50">
+            <button (click)="showHobby()" class="btn btn-primary">{{showHobbies ? "Hide Hobbies": "Show Hobbies" }}</button>
+             <div *ngIf="showHobbies">
+             <div class="well">
+            <ul>
+            <li class="list-group-item list-group-item-success" *ngFor="let hobby of hobbies; let i=index"><i class="glyphicon glyphicon-film">
+              {{hobby}} <button (click)="delHobby(i)" class="btn btn-xs btn-danger"> 
+  <span class="glyphicon glyphicon-remove"></span></button>
+            
+            </i>
+            </li>
+            </ul>
+            <input type="text" #hobby >
+            <button (click)="addHobby(hobby.value)" class="btn btn-success">Add Hobbies</button>
+            </div>
+            </div>
+            
+         
+              
+    
+    

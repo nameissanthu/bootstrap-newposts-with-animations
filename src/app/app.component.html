@@ -1,3 +1,18 @@
-<h1>
-  {{title}}
-</h1>
+<navv></navv>
+ 
+<div class="text-center">
+ 
+<user></user>
+
+<hr class="list-group-item list-group-item-info">
+<h1 class="list-group-item list-group-item-success">User Posts</h1>
+<img src="http://www.freepngimg.com/download/animation/11-2-animation-png-hd.png" height="100" width="50">
+<button (click)="showp()" class="btn btn-info">{{showPosts ? "Hide showPosts" :"Show Posts"}}</button>
+<div *ngIf="showPosts">
+  
+<post></post>
+
+</div>
+</div>
+
+<hr class="list-group-item list-group-item-danger"> 
